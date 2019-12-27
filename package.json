@@ -1,7 +1,7 @@
 {
   "name": "arrow-key-nav",
-  "version": "1.0.0",
-  "description": "Navigate between document elements using keyboard arrow keys.",
+  "version": "1.0.1",
+  "description": "https://github.com/HadiModarres/arrow-key-nav",
   "main": "index.js",
   "directories": {
     "doc": "doc"
@@ -11,14 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "github.com/HadiModarres/arrow-key-nav"
+    "url": "https://github.com/HadiModarres/arrow-key-nav"
   },
   "keywords": [
     "arrow",
     "key",
     "nav",
     "navigation",
-    "keyboard"
+    "keyboard",
+    "focus",
+    "arrow-key"
   ],
   "author": "Hadi Modarres",
   "license": "MIT"
