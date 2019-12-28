@@ -6,7 +6,6 @@ function setNavigableClassName(className){
 }
 
 document.onkeydown = function(ev){
-        ev.preventDefault();
         navigables = Array.from(document.getElementsByClassName(classN));
         for (let n of navigables){
             n.tabIndex="0";
@@ -15,20 +14,25 @@ document.onkeydown = function(ev){
         let elem = null;
         switch (ev.code) {
             case "ArrowUp":
+              ev.preventDefault();
                 elem = getClosestUpElementTo(...getRefPointForSide(document.activeElement,"up"));
                 break;
             case "ArrowDown":
+              ev.preventDefault();
                 elem = getClosestDownElementTo(...getRefPointForSide(document.activeElement,"down"));
                 break;
             case "ArrowLeft":
+              ev.preventDefault();
                 elem = getClosestLeftElementTo(...getRefPointForSide(document.activeElement,"left"));
                 break;
             case "ArrowRight":
+              ev.preventDefault();
                 elem = getClosestRightElementTo(...getRefPointForSide(document.activeElement,"right"));
                 break;
         }
         console.log(elem);
         if (elem){
+            elem.tabIndex= "0";
             elem.focus();
         }
 };
